@@ -278,6 +278,119 @@
             "id": "d356d14b6e293a3020a244b63d278d8f",
             "type": "MACROPONENT"
         },
+        "elementId": "container_1",
+        "elementLabel": "Container 1",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "overrides": {
+            "composition": [
+                {
+                    "definition": {
+                        "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "stylized_text_1",
+                    "elementLabel": "Stylized text 1",
+                    "eventMappings": [],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "configAria": {
+                            "type": "JSON_LITERAL",
+                            "value": {}
+                        },
+                        "css": {
+                            "type": "JSON_LITERAL",
+                            "value": "* { }"
+                        },
+                        "tag": {
+                            "type": "JSON_LITERAL",
+                            "value": "h1"
+                        },
+                        "text": {
+                            "binding": {
+                                "address": [
+                                    "add_user_to_text_string_1",
+                                    "output"
+                                ]
+                            },
+                            "type": "DATA_OUTPUT_BINDING"
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                }
+            ],
+            "layout": {
+                "default": {
+                    "children": null,
+                    "items": [
+                        {
+                            "element_id": "stylized_text_1",
+                            "styles": {}
+                        }
+                    ],
+                    "root": null,
+                    "rules": null,
+                    "styles": {
+                        "align-items": "center",
+                        "flex-direction": "column"
+                    },
+                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type": "flex"
+                },
+                "version": "3.0.0"
+            }
+        },
+        "preset": null,
+        "propertyValues": {
+            "ariaRegionHeadingLevel": {
+                "type": "JSON_LITERAL",
+                "value": "1"
+            },
+            "ariaRegionName": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": ""
+                }
+            },
+            "ariaRole": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "hideEmptyStateUi": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "includeAriaHeading": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "slotWrapperBehavior": {
+                "type": "JSON_LITERAL",
+                "value": "fullheight"
+            },
+            "type": {
+                "type": "JSON_LITERAL",
+                "value": "section"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "d356d14b6e293a3020a244b63d278d8f",
+            "type": "MACROPONENT"
+        },
         "elementId": "reports_row",
         "elementLabel": "Reports row",
         "eventMappings": [],
@@ -3634,7 +3747,30 @@
     }
 ]</composition>
         <da_relay_models/>
-        <data>[]</data>
+        <data>[
+    {
+        "definition": {
+            "id": "2df6e7132bef1e106016fd2cce91bfcb",
+            "type": "TRANSFORM"
+        },
+        "elementId": "add_user_to_text_string_1",
+        "elementLabel": "Add User to Text String 1",
+        "eventMappings": [],
+        "inputValues": {
+            "userFullName": {
+                "binding": {
+                    "address": [
+                        "user",
+                        "fullName"
+                    ],
+                    "category": "session"
+                },
+                "type": "CONTEXT_BINDING"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    }
+]</data>
         <description/>
         <disable_auto_reflow>false</disable_auto_reflow>
         <dispatched_events>d0f7589f2b63da10302cf5c40391bf6d</dispatched_events>
@@ -3674,6 +3810,13 @@
                 "styles": {
                     "background": "#81B5A1",
                     "input-6dgohx5atnp6-86796": "#81B5A1"
+                }
+            },
+            {
+                "element_id": "container_1",
+                "styles": {
+                    "background": "rgb(var(--now-color--primary-0))",
+                    "width": "100%"
                 }
             },
             {
@@ -3797,14 +3940,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-10 22:01:08</sys_created_on>
         <sys_id>3760830f2b2fda106016fd2cce91bfb8</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>NeedIt Admin home</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_ux_macroponent_3760830f2b2fda106016fd2cce91bfb8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-11 19:05:56</sys_updated_on>
+        <sys_updated_on>2025-02-11 19:44:04</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=3760830f2b2fda106016fd2cce91bfb8"/>
 </record_update>
